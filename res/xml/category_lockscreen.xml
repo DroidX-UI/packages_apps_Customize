@@ -26,6 +26,16 @@
             android:summary="@string/enable_fingerprint_ripple_effect_summary"
             android:defaultValue="true" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/dt_category_header">
+
+        <com.droidx.support.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="true" />
     </PreferenceCategory> 
 
     <com.droidx.support.preferences.SystemSettingSwitchPreference
