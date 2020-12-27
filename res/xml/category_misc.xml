@@ -54,4 +54,10 @@
             android:fragment="com.droidx.customize.fragments.LockScreenWidgets" />
     </PreferenceCategory>
 
+    <Preference
+            android:key="pulse_settings"
+            android:title="@string/lock_screen_pulse_settings_title"
+            android:summary="@string/lock_screen_pulse_settings_summary"
+            android:fragment="com.droidx.customize.fragments.PulseSettings" />
+
 </PreferenceScreen>
