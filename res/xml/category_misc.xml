@@ -43,4 +43,10 @@
         android:summary="@string/use_photos_spoof_summary"
         android:defaultValue="true" />
 
+    <!-- Unlock FPS for specific games -->
+    <com.droidx.support.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pixelprops.games"
+        android:title="@string/use_games_spoof_title"
+        android:summary="@string/use_games_spoof_summary" />
+
 </PreferenceScreen>
