@@ -28,5 +28,16 @@
             android:summary="@string/heads_up_notifications_summary"
             android:title="@string/heads_up_notifications"
             android:fragment="com.droidx.customize.HeadsUpSettings"/>
+            
+    <PreferenceCategory
+        android:title="@string/notifications_category_title">
+
+        <com.droidx.support.preferences.SystemSettingSwitchPreference
+             android:key="notification_sound_vib_screen_on"
+             android:title="@string/notification_sound_vib_screen_on_title"
+             android:summary="@string/notification_sound_vib_screen_on_summary"
+             android:defaultValue="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
