@@ -308,4 +308,9 @@
     <string name="heads_up_snooze_10min">10 minutes</string>
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
+    
+    <!-- Annoying Notifications -->
+    <string name="notifications_category_title">Annoying notifications protection</string>
+    <string name="notification_sound_vib_screen_on_title">Annoying Notifications</string>
+    <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
 </resources>
