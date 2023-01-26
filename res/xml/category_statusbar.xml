@@ -31,6 +31,18 @@
          android:dependency="network_traffic_state"
          android:defaultValue="false" />
 
-    </PreferenceCategory>
-    
+   </PreferenceCategory>
+     
+   <PreferenceCategory
+      android:title="@string/combined_status_bar_signal_icons_title">
+      
+   <!-- Combined signal icons -->
+        <SwitchPreference
+            android:key="enable_combined_signal_icons"
+            android:title="@string/combined_status_bar_signal_icons_title"
+            android:summary="@string/combined_status_bar_signal_icons_summary"
+            android:defaultValue="false" />
+   
+   </PreferenceCategory>
+
 </PreferenceScreen>

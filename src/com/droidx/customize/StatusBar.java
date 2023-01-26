@@ -70,9 +70,13 @@ import android.os.SystemProperties;
 @SearchIndexable
 public class StatusBar extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
-            
+    
+    private static final String KEY_COMBINED_SIGNAL_ICONS = "enable_combined_signal_icons";
+    private static final String SYS_COMBINED_SIGNAL_ICONS = "persist.sys.flags.combined_signal_icons";      
+    
     private SystemSettingSwitchPreference mThreshold;
     private SystemSettingMainSwitchPreference mNetMonitor;
+    private SwitchPreference mCombinedSignalIcons;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -96,6 +100,10 @@ public class StatusBar extends SettingsPreferenceFragment
         mThreshold.setChecked(isThresholdEnabled);
         mThreshold.setOnPreferenceChangeListener(this);
         
+        // Combined Signal Icons
+        mCombinedSignalIcons = (SwitchPreference) findPreference(KEY_COMBINED_SIGNAL_ICONS);
+        mCombinedSignalIcons.setChecked(SystemProperties.getBoolean(SYS_COMBINED_SIGNAL_ICONS, false));
+        mCombinedSignalIcons.setOnPreferenceChangeListener(this);
     }
     
     @Override
@@ -114,7 +122,14 @@ public class StatusBar extends SettingsPreferenceFragment
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             return true;
-        } 
+        } else if (preference == mCombinedSignalIcons) {
+            boolean value = (Boolean) objValue;
+            Settings.Secure.putIntForUser(getContentResolver(),
+                Settings.Secure.ENABLE_COMBINED_SIGNAL_ICONS, value ? 1 : 0, UserHandle.USER_CURRENT);
+            SystemProperties.set(SYS_COMBINED_SIGNAL_ICONS, value ? "true" : "false");
+            SystemPropPoker.getInstance().poke();
+            return true;
+        }
         return false;
     }
     
