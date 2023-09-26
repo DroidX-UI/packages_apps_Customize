@@ -104,7 +104,6 @@
     <string name="powermenu_users">Users</string>
     <string name="powermenu_logout">Logout</string>
     <string name="powermenu_emergency">Emergency</string>
-    <string name="powermenu_torch">Flashlight</string>
 
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic indicator</string>
