@@ -29,9 +29,10 @@
    <PreferenceCategory
       android:title="@string/network_traffic_title">
       
-      <com.droidx.support.preferences.SystemSettingMainSwitchPreference
+      <com.droidx.support.preferences.SystemSettingSwitchPreference
          android:key="network_traffic_state"
          android:title="@string/network_traffic_master_switch_title"
+         android:summary="@string/network_traffic_state_summary"
          android:defaultValue="false" />
         
       <com.droidx.support.preferences.SystemSettingSwitchPreference
