@@ -60,8 +60,8 @@
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar icon -->
     <string name="theme_customization_font_summary">Set system font style</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the system wide icon pack. -->
-    <string name="theme_customization_icon_pack_title">Icon pack</string>
-    <string name="theme_customization_icon_pack_summary">Set custom icon pack style</string>
+    <string name="theme_customization_icon_pack_title">System Icon pack</string>
+    <string name="theme_customization_icon_pack_summary">Set System custom icon pack style</string>
 
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_category_title">StatusBar Battery customizations (SystemUI restart needed)</string>
