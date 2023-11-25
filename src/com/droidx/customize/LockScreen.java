@@ -34,7 +34,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
 import androidx.preference.SwitchPreferenceCompat;
 import android.view.IWindowManager;
 import android.view.View;
@@ -48,6 +47,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.internal.util.droidx.udfps.CustomUdfpsUtils;
+import com.android.internal.util.droidx.OmniJawsClient;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,6 +56,11 @@ import java.util.List;
 @SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_WEATHER = "lockscreen_weather_enabled";
+
+    private Preference mWeather;
+    private OmniJawsClient mWeatherClient;
     
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
@@ -71,6 +76,10 @@ public class LockScreen extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mWeather = (Preference) findPreference(KEY_WEATHER);
+        mWeatherClient = new OmniJawsClient(getContext());
+        updateWeatherSettings();
 
         mUdfpsCategory = findPreference(UDFPS_CATEGORY);
 	    //Handle NPE on UdfpsCategory being null
@@ -91,6 +100,7 @@ public class LockScreen extends SettingsPreferenceFragment
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mFingerprintVib) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -98,6 +108,21 @@ public class LockScreen extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    private void updateWeatherSettings() {
+        if (mWeatherClient == null || mWeather == null) return;
+
+        boolean weatherEnabled = mWeatherClient.isOmniJawsEnabled();
+        mWeather.setEnabled(weatherEnabled);
+        mWeather.setSummary(weatherEnabled ? R.string.lockscreen_weather_summary :
+            R.string.lockscreen_weather_enabled_info);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateWeatherSettings();
     }  
 
     @Override
