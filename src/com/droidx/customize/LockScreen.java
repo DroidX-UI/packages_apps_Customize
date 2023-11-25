@@ -38,6 +38,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.internal.util.droidx.OmniJawsClient;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,6 +47,11 @@ import java.util.List;
 @SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_WEATHER = "lockscreen_weather_enabled";
+
+    private Preference mWeather;
+    private OmniJawsClient mWeatherClient;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -54,11 +60,32 @@ public class LockScreen extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mWeather = (Preference) findPreference(KEY_WEATHER);
+        mWeatherClient = new OmniJawsClient(getContext());
+        updateWeatherSettings();
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        
         return false;
+    }
+
+    private void updateWeatherSettings() {
+        if (mWeatherClient == null || mWeather == null) return;
+
+        boolean weatherEnabled = mWeatherClient.isOmniJawsEnabled();
+        mWeather.setEnabled(weatherEnabled);
+        mWeather.setSummary(weatherEnabled ? R.string.lockscreen_weather_summary :
+            R.string.lockscreen_weather_enabled_info);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateWeatherSettings();
     }  
 
     @Override
