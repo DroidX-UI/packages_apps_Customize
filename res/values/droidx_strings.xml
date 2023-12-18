@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project-Awaken
+     Copyright (C) 2023 DroidX
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- DroidX Customizer -->
+    <string name="customize_dashboard_title">DXUI LAB</string>
+     <string name="build_tweaks_summary_title">Customize your own version of DroidX-UI!</string>
+      
+    <!-- General -->
+    <string name="ok">Okay</string>
+    <string name="default_string">Default</string>
+    <string name="add">Add</string>
+    <string name="enabled">Enabled</string>
+    <string name="choose_app">Choose application</string>
+    <string name="help">Help</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="attention">Attention</string>
+    <string name="reset">Reset</string>
+    
+    <string name="category_system_title">System</string>
+    <string name="category_buttons_title">Buttons</string>
+    <string name="category_lockscreen_title">Lockscreen</string>
+    <string name="category_gestures_title">Gestures</string>
+    <string name="category_battery_title">Battery</string>
+    <string name="category_notifications_title">Notifications</string>
+    <string name="category_powermenu_title">Power Menu</string>
+    <string name="category_quicksettings_title">Quick Settings</string>
+    <string name="category_statusbar_title">Statusbar</string>
+    <string name="category_misc_title">Miscellaneous</string>
+
+    <string name="category_system_summary">Personalize your device with system settings Customization.</string>
+    <string name="category_buttons_summary">Easily modify buttons for seamless devices control.</string>
+    <string name="category_lockscreen_summary">Manage and personalize the lockscreen elements and actions.</string>
+    <string name="category_gestures_summary">Configure intuitive gestures for seamless device interaction.</string>
+    <string name="category_battery_summary">Customize battery style to match your preferences.</string>
+    <string name="category_notifications_summary">Personalize your device\'s notification with ease.</string>
+    <string name="category_powermenu_summary">Customize your power menu for efficiency.</string>
+    <string name="category_quicksettings_summary">Easily customize quick settings for seamless access.</string>
+    <string name="category_statusbar_summary">Tailor the statusbar to your preferences.</string>
+    <string name="category_misc_summary">Use various spoofs and misc settings.</string>
+
+</resources> 
