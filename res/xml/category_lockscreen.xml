@@ -87,4 +87,20 @@
             android:dependency="custom_aod_image_enabled" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="lockscreen_clock_category"
+        android:title="@string/lockscreen_clock_category_title">
+
+        <Preference
+            android:key="lockscreen_preview"
+            settings:layout="@layout/lockscreen_preview" />
+
+        <com.droidx.support.preferences.SystemSettingListPreference
+            android:entries="@array/clock_style_entries"
+            android:title="@string/custom_clock_style"
+            android:key="clock_style"
+            android:defaultValue="0"
+            android:entryValues="@array/clock_style_values" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
