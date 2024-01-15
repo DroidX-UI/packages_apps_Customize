@@ -83,4 +83,8 @@
     <string name="lockscreen_weather_text_title">Current condition</string>
     <string name="lockscreen_weather_text_summary">Display current weather condition summary</string>
 
+    <!-- Volume Haptic feedback -->
+    <string name="volume_panel_haptic_feedback_title">Volume Haptic Feedback</string>
+    <string name="volume_panel_haptic_feedback_summary">Vibrate on changing volume</string>
+
 </resources> 
