@@ -23,4 +23,16 @@
             android:summary="@string/volume_panel_haptic_feedback_summary"
             android:defaultValue="false" />
 
+     <PreferenceCategory
+          android:title="@string/monet_category">
+
+          <!-- Monet settings -->
+          <Preference
+               android:key="monet_settings"
+               android:title="@string/monet_settings_title"
+               android:summary="@string/monet_settings_summary"
+               android:fragment="com.droidx.customize.fragments.Monet" />
+
+     </PreferenceCategory>
+
 </PreferenceScreen>
