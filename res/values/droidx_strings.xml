@@ -51,4 +51,9 @@
     <string name="category_statusbar_summary">Tailor the statusbar to your preferences.</string>
     <string name="category_misc_summary">Use various spoofs and misc settings.</string>
 
+    <!-- Fingerprint Ripple Effect -->
+    <string name="fingerprint_category">Fingerprint</string>
+    <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
+    <string name="enable_fingerprint_ripple_effect_summary">Show ripple effect on unlock with fingerprint</string>
+
 </resources> 
