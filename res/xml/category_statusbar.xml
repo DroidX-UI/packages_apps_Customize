@@ -24,7 +24,14 @@
             android:title="@string/network_traffic_title"
             android:summary="@string/network_traffic_summary"
             android:fragment="com.droidx.customize.fragments.NetworkTrafficSettings"/>
+     
+     </PreferenceCategory>
 
-    </PreferenceCategory>
+    <!-- Double tap to sleep -->
+    <com.droidx.support.preferences.SystemSettingSwitchPreference
+          android:key="double_tap_sleep_gesture"
+          android:title="@string/double_tap_sleep_gesture_title"
+          android:summary="@string/double_tap_sleep_gesture_summary"
+          android:defaultValue="true" />
 
 </PreferenceScreen>
