@@ -106,5 +106,9 @@
     <!-- Ambient music ticker -->
     <string name="pulse_on_new_tracks_title">Music ticker</string>
     <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
+    
+    <!-- Volume panel to left -->
+    <string name="volume_panel_on_left_title">Show volume panel on left</string>
+    <string name="volume_panel_on_left_summary">Display volume panel on the left side of the screen</string>
 
 </resources> 
