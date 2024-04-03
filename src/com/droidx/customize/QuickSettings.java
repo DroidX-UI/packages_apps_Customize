@@ -47,11 +47,27 @@ import java.util.List;
 public class QuickSettings extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
 
+    private static final String[] qsCustPreferences = { "qs_tile_shape",
+            "qqs_num_columns", "qqs_num_columns_landscape",
+            "qs_num_columns", "qs_num_columns_landscape" };
+    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_quicksettings);
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        boolean qsStyleRound = Settings.Secure.getIntForUser(getContext().getContentResolver(),
+                Settings.Secure.QS_STYLE_ROUND, 1, UserHandle.USER_CURRENT) == 1;
+
+        if (!qsStyleRound) {
+            for (String key : qsCustPreferences) {
+                Preference preference = prefSet.findPreference(key);
+                if (preference != null) {
+                    preference.setEnabled(false);
+                }
+            }
+        }
 
     }
     
