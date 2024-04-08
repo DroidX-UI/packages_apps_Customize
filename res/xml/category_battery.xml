@@ -65,4 +65,17 @@
 
     </PreferenceCategory>
 
+    <!-- Qs battery customizations -->
+    <PreferenceCategory
+        android:title="Battery Extra customization" >
+
+        <!-- Battery styles -->
+        <Preference
+            android:key="misc_batterysb"
+            android:fragment="com.droidx.customize.fragments.MiscBatterySettings"
+            android:title="Misc Battery Icon Settings"
+            android:summary="Customize Statusbar Battery icon settings" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
