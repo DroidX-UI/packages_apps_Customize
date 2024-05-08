@@ -47,10 +47,17 @@
          android:persistent="false"
          android:defaultValue="true" />
 
-     <Preference
-        android:key="udfps_settings"
-        android:title="@string/udfps_settings_title"
-        android:summary="@string/udfps_settings_summary"
-        android:fragment="com.droidx.customize.fragments.UdfpsSettings" />
+     <!-- Udfps options -->
+    <PreferenceCategory
+        android:key="udfps_category"
+        android:title="@string/udfps_category">
+
+        <Preference
+            android:key="udfps_settings"
+            android:title="@string/udfps_settings_title"
+            android:summary="@string/udfps_settings_summary"
+            android:fragment="com.droidx.customize.fragments.UdfpsSettings" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
