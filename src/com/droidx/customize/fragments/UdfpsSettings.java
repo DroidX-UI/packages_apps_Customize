@@ -60,18 +60,19 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.udfps_settings);
 
-        final PreferenceScreen prefSet = getPreferenceScreen();
-        Resources resources = getResources();
+	final PreferenceScreen prefSet = getPreferenceScreen();
+	Resources resources = getResources();
 
-        final boolean udfpsResPkgInstalled = DroidXUtils.isPackageInstalled(getContext(),
-                "com.droidx.udfps.resources");
-        mUdfpsCustomization = (PreferenceCategory) findPreference(UDFPS_CUSTOMIZATION);
-	      mUdfpsIcons = (Preference) findPreference(KEY_UDFPS_ICONS);
-        if (!udfpsResPkgInstalled) {
-            prefSet.removePreference(mUdfpsCustomization);
-	    prefSet.removePreference(mUdfpsIcons);
-        }
-
+	final boolean udfpsResPkgInstalled = DroidXUtils.isPackageInstalled(getContext(),
+        	"com.droidx.udfps.resources");
+	mUdfpsCustomization = (PreferenceCategory) findPreference(UDFPS_CUSTOMIZATION);
+	mUdfpsIcons = findPreference(KEY_UDFPS_ICONS); // Change cast to findPreference
+	if (mUdfpsCustomization != null && !udfpsResPkgInstalled) {
+	    prefSet.removePreference(mUdfpsCustomization);
+	    if (mUdfpsIcons != null) { // Check if mUdfpsIcons is not null before removing
+            	prefSet.removePreference(mUdfpsIcons);
+            }
+    	}
     }
 
     @Override
