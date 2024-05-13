@@ -18,6 +18,7 @@ package com.droidx.customize;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
+import android.hardware.fingerprint.FingerprintManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,10 +29,12 @@ import android.provider.Settings;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.droidx.DroidXUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -46,14 +49,36 @@ import java.util.List;
 @SearchIndexable
 public class Misc extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_ANIMATIONS_CATEGORY = "themes_animations_category";
+    private static final String KEY_UDFPS_ANIMATION = "udfps_animation";
+
+    private PreferenceCategory mAnimationsCategory;
+    private Preference mUdfpsAnimation;
     
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_misc);
         PreferenceScreen prefSet = getPreferenceScreen();
+        final Context context = getContext();
+        final ContentResolver resolver = context.getContentResolver();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mAnimationsCategory = (PreferenceCategory) findPreference(KEY_ANIMATIONS_CATEGORY);
+        mUdfpsAnimation = (Preference) findPreference(KEY_UDFPS_ANIMATION);
+
+        FingerprintManager fingerprintManager = (FingerprintManager)
+                getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+
+        if (fingerprintManager == null || !fingerprintManager.isHardwareDetected()) {
+            mAnimationsCategory.removePreference(mUdfpsAnimation);
+        } else {
+            if (!Utils.isPackageInstalled(context, "com.droidx.udfps.animations")) {
+                mAnimationsCategory.removePreference(mUdfpsAnimation);
+            }
+        }
     }
     
     @Override
@@ -79,6 +104,18 @@ public class Misc extends SettingsPreferenceFragment
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     final List<String> keys = super.getNonIndexableKeys(context);
+                    final Resources res = getResources();
+
+                    FingerprintManager fingerprintManager = (FingerprintManager)
+                        context.getSystemService(Context.FINGERPRINT_SERVICE);
+
+                    if (fingerprintManager == null || !fingerprintManager.isHardwareDetected()) {
+                        keys.add(KEY_UDFPS_ANIMATION);
+                    } else {
+                        if (!DroidXUtils.isPackageInstalled(context, "com.droidx.udfps.animations")) {
+                            keys.add(KEY_UDFPS_ANIMATION);
+                        }
+                    }
                     return keys;
                 }
             };

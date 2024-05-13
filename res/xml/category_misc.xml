@@ -17,4 +17,16 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_misc_title" >
 
+    <PreferenceCategory
+        android:key="themes_animations_category"
+        android:title="@string/themes_animations_category">
+
+        <!-- Udfps animation -->
+        <Preference
+            android:key="udfps_animation"
+            android:title="@string/themes_udfps_animation_title"
+            android:summary="@string/themes_udfps_animation_summary"
+            android:fragment="com.droidx.customize.fragments.UdfpsAnimations" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
