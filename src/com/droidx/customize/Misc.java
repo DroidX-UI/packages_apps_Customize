@@ -50,9 +50,13 @@ import java.util.List;
 public class Misc extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_ICONS_CATEGORY = "themes_icons_category";
+    private static final String KEY_UDFPS_ICON = "udfps_icon";
     private static final String KEY_ANIMATIONS_CATEGORY = "themes_animations_category";
     private static final String KEY_UDFPS_ANIMATION = "udfps_animation";
 
+    private PreferenceCategory mIconsCategory;
+    private Preference mUdfpsIcon;
     private PreferenceCategory mAnimationsCategory;
     private Preference mUdfpsAnimation;
     
@@ -63,9 +67,11 @@ public class Misc extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Context context = getContext();
         final ContentResolver resolver = context.getContentResolver();
-        final Resources res = getResources();
+        final Resources res = context.getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
+        mIconsCategory = (PreferenceCategory) findPreference(KEY_ICONS_CATEGORY);
+        mUdfpsIcon = (Preference) findPreference(KEY_UDFPS_ICON);
         mAnimationsCategory = (PreferenceCategory) findPreference(KEY_ANIMATIONS_CATEGORY);
         mUdfpsAnimation = (Preference) findPreference(KEY_UDFPS_ANIMATION);
 
@@ -73,9 +79,13 @@ public class Misc extends SettingsPreferenceFragment
                 getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
 
         if (fingerprintManager == null || !fingerprintManager.isHardwareDetected()) {
+            mIconsCategory.removePreference(mUdfpsIcon);
             mAnimationsCategory.removePreference(mUdfpsAnimation);
         } else {
-            if (!Utils.isPackageInstalled(context, "com.droidx.udfps.animations")) {
+            if (!DroidXUtils.isPackageInstalled(context, "com.droidx.udfps.icons")) {
+                mIconsCategory.removePreference(mUdfpsIcon);
+            }
+            if (!DroidXUtils.isPackageInstalled(context, "com.droidx.udfps.animations")) {
                 mAnimationsCategory.removePreference(mUdfpsAnimation);
             }
         }
@@ -104,14 +114,18 @@ public class Misc extends SettingsPreferenceFragment
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     final List<String> keys = super.getNonIndexableKeys(context);
-                    final Resources res = getResources();
+                    final Resources res = context.getResources();
 
                     FingerprintManager fingerprintManager = (FingerprintManager)
                         context.getSystemService(Context.FINGERPRINT_SERVICE);
 
                     if (fingerprintManager == null || !fingerprintManager.isHardwareDetected()) {
+                        keys.add(KEY_UDFPS_ICON);
                         keys.add(KEY_UDFPS_ANIMATION);
                     } else {
+                        if (!DroidXUtils.isPackageInstalled(context, "com.droidx.udfps.icons")) {
+                            keys.add(KEY_UDFPS_ICON);
+                        }
                         if (!DroidXUtils.isPackageInstalled(context, "com.droidx.udfps.animations")) {
                             keys.add(KEY_UDFPS_ANIMATION);
                         }

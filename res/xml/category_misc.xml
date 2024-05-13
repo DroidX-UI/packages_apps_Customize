@@ -29,4 +29,15 @@
             android:fragment="com.droidx.customize.fragments.UdfpsAnimations" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="themes_icons_category"
+        android:title="@string/themes_icons_category">
+
+        <!-- Udfps icon -->
+        <Preference
+            android:key="udfps_icon"
+            android:title="@string/themes_udfps_icon_title"
+            android:summary="@string/themes_udfps_icon_summary"
+            android:fragment="com.droidx.customize.fragments.UdfpsIcons" />
+
 </PreferenceScreen>

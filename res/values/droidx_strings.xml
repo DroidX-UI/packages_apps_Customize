@@ -115,8 +115,11 @@
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
 
     <!-- UDFPS Animation -->
+    <string name="themes_icons_category">Icons</string>
     <string name="themes_animations_category">Animations</string>
     <string name="themes_udfps_animation_title">UDFPS animation</string>
     <string name="themes_udfps_animation_summary">Set UDFPS animation style</string>
+    <string name="themes_udfps_icon_title">UDFPS icon</string>
+    <string name="themes_udfps_icon_summary">Set UDFPS icon style</string>
 
 </resources> 
