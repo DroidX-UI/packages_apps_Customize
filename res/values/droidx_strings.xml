@@ -114,12 +114,15 @@
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
 
-    <!-- UDFPS Animation -->
+    <!-- UDFPS -->
     <string name="themes_icons_category">Icons</string>
     <string name="themes_animations_category">Animations</string>
     <string name="themes_udfps_animation_title">UDFPS animation</string>
     <string name="themes_udfps_animation_summary">Set UDFPS animation style</string>
     <string name="themes_udfps_icon_title">UDFPS icon</string>
     <string name="themes_udfps_icon_summary">Set UDFPS icon style</string>
+    <string name="lock_screen_fingerprint_category">Under Display Fingerprint</string>
+    <string name="lock_screen_screen_off_udfps_title">Screen-Off UDFPS</string>
+    <string name="lock_screen_screen_off_udfps_summary">Keep UDFPS enabled while the screen is off</string>
 
 </resources> 
