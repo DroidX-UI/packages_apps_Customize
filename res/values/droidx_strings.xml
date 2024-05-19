@@ -76,4 +76,8 @@
     <string name="gesture_title">Gestures Settings</string>
     <string name="three_finger_summary">Swipe 3 fingers to take Screenshot</string>
 
+    <!-- WIFI Standard -->
+    <string name="status_bar_wifi_standard_icon_title">Wi-Fi standard</string>
+    <string name="status_bar_wifi_standard_icon_summary">Display Wi-Fi standard next the Wi-Fi icon</string>
+
 </resources> 
