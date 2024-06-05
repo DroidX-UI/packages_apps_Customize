@@ -318,5 +318,7 @@
 
     <string name="quick_settings_qqs_rows_portrait_title">Quick QS Rows (portrait)</string>
     <string name="quick_settings_qqs_rows_landscape_title">Quick QS Rows (landscape)</string>
+    
+    <string name="quick_settings_tile_label_size_title">Label text size</string>
 </resources>
 

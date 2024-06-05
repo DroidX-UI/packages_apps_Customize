@@ -16,6 +16,16 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_quicksettings_title" >
 
+    <!-- Label text size -->
+    <com.droidx.support.preferences.SystemSettingSeekBarPreference
+        android:key="qs_tile_label_size"
+        android:title="@string/quick_settings_tile_label_size_title"
+        android:max="15"
+        settings:min="10"
+        settings:interval="1"
+        settings:units="sp"
+        android:defaultValue="14" />
+
     <!-- Hide label -->
     <com.droidx.support.preferences.SystemSettingSwitchPreference
         android:key="qs_tile_label_hide"
