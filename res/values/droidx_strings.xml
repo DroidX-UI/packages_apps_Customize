@@ -307,5 +307,13 @@
     <string name="udfps_icon_picker_summary">Choose your favorite fingerprint icon</string>
     <string name="udfps_recog_animation_effect_title">UDFPS custom animation</string>
     <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
+
+    <!-- QS Panel -->
+    <string name="quick_settings_tile_label_hide_title">Hide label</string>
+    <string name="quick_settings_tile_label_hide_summary">Only show icon in tile</string>
+    <string name="quick_settings_tile_layout_title">Vertical layout</string>
+    <string name="quick_settings_tile_layout_summary">Show label below icon instead next to icon</string>
+    <string name="quick_settings_columns_portrait_title">Columns (portrait)</string>
+    <string name="quick_settings_columns_landscape_title">Columns (landscape)</string>
 </resources>
 
