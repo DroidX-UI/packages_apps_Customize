@@ -48,6 +48,24 @@
         settings:interval="1"
         android:defaultValue="4" />
 
+    <!-- Quick QS rows (portrait) -->
+    <com.droidx.support.preferences.SystemSettingSeekBarPreference
+        android:key="qqs_layout_rows"
+        android:title="@string/quick_settings_qqs_rows_portrait_title"
+        android:max="3"
+        settings:min="1"
+        settings:interval="1"
+        android:defaultValue="2" />
+
+    <!-- Quick QS rows (landscape) -->
+    <com.droidx.support.preferences.SystemSettingSeekBarPreference
+        android:key="qqs_layout_rows_landscape"
+        android:title="@string/quick_settings_qqs_rows_landscape_title"
+        android:max="3"
+        settings:min="1"
+        settings:interval="1"
+        android:defaultValue="1" />
+
     <com.droidx.support.preferences.SystemSettingSwitchPreference
         android:key="qs_footer_data_usage"
         android:title="@string/qs_footer_datausage_title"
