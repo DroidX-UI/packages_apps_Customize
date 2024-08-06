@@ -325,5 +325,9 @@
     <string name="quick_settings_tile_ui_style_a11_circle">Circle tiles</string>
     <string name="quick_settings_tile_ui_style_a11_square">Square tiles</string>
     <string name="quick_settings_tile_ui_style_a11_mix">Circle &amp; Square tiles</string>
+
+    <!-- Google Play Integrity Spoof -->
+    <string name="pi_spoof_title">Google Play Integrity spoof</string>
+    <string name="pi_spoof_summary">Spoof your device as different model for Google Play Integrity</string>
 </resources>
 
