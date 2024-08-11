@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/spoofing_title">
+
+    <PreferenceCategory
+        android:key="spoofing_system_category"
+        android:title="@string/spoofing_system_wide_category">
+
+        <!-- Games fps -->
+        <com.droidx.support.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.gamehooks.enable"
+            android:title="@string/spoofing_games_title"
+            android:summary="@string/spoofing_games_summary"
+            android:defaultValue="false" />
+
+        <!-- Encryption -->
+        <com.droidx.support.preferences.SystemPropertySwitchPreference
+            android:key="spoofing_storage_encryption"
+            android:title="@string/spoofing_storage_encryption_title"
+            android:summary="@string/spoofing_storage_encryption_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="spoofing_apps_category"
+        android:title="@string/spoofing_app_specific_category">
+
+        <!-- Google Photos -->
+        <com.droidx.support.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.gphooks.enable"
+            android:title="@string/spoofing_photos_title"
+            android:summary="@string/spoofing_photos_summary"
+            android:defaultValue="false" />
+
+        <!-- Snapchat -->
+        <com.droidx.support.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.snaphooks.enable"
+            android:title="@string/spoofing_snapchat_title"
+            android:summary="@string/spoofing_snapchat_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>
