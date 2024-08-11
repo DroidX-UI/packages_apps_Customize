@@ -249,10 +249,10 @@
     <!-- Miscellaneous/Spoofing -->
     <string name="spoofing_title">World of Spoofs</string>
     <string name="spoofing_summary">Bypass app restrictions by spoofing components</string>
-    <string name="spoofing_system_category">System-Wide Spoofs</string>
+    <string name="spoofing_system_wide_category">System-Wide Spoofs</string>
     <string name="spoofing_storage_encryption_title">Storage encryption</string>
     <string name="spoofing_storage_encryption_summary">Spoof the device storage encryption status to \'Encrypted\'</string>
-    <string name="spoofing_apps_category">App-Specific Spoofs<string>
+    <string name="spoofing_app_specific_category">App-Specific Spoofs<string>
     <string name="spoofing_photos_title">Google Photos spoof</string>
     <string name="spoofing_photos_summary">Spoof the Google Photos app as a Pixel XL</string>
     <string name="spoofing_games_title">Higher FPS in games</string>
