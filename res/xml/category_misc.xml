@@ -17,12 +17,24 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_misc_title" >
 
-    <PreferenceScreen
-        android:key="monet_engine"
-        android:title="@string/monet_title"
-        android:summary="@string/monet_summary"
-        android:fragment="com.droidx.customize.fragments.MonetSettings" />
+    <PreferenceCategory
+        android:key="System_category"
+        android:title="@string/system_category">
 
+        <PreferenceScreen
+            android:key="monet_engine"
+            android:title="@string/monet_title"
+            android:summary="@string/monet_summary"
+            android:fragment="com.droidx.customize.fragments.MonetSettings" />
+
+        <PreferenceScreen
+            android:key="spoofing_settings"
+            android:title="@string/spoofing_title"
+            android:summary="@string/spoofing_summary"
+            android:fragment="com.droidx.customize.fragments.DeviceSpoofSettings" />
+            
+    </PreferenceCategory>
+    
     <com.droidx.support.preferences.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
         android:title="@string/laboratory_ignore_window_secure_title"
@@ -30,3 +42,4 @@
         android:defaultValue="false"/>
 
 </PreferenceScreen>
+
