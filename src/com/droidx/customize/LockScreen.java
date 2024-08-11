@@ -31,7 +31,6 @@ import android.provider.Settings;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
@@ -47,7 +46,6 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
-import com.android.internal.util.droidx.udfps.CustomUdfpsUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -61,8 +59,6 @@ public class LockScreen extends SettingsPreferenceFragment
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreferenceCompat mFingerprintVib;
-    private static final String UDFPS_CATEGORY = "udfps_category";
-    private PreferenceCategory mUdfpsCategory;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -71,12 +67,6 @@ public class LockScreen extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
-
-        mUdfpsCategory = findPreference(UDFPS_CATEGORY);
-	    //Handle NPE on UdfpsCategory being null
-        if (mUdfpsCategory != null && !CustomUdfpsUtils.hasUdfpsSupport(getContext())) {
-            prefScreen.removePreference(mUdfpsCategory);
-        }
         
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreferenceCompat) findPreference(FINGERPRINT_VIB);

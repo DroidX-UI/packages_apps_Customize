@@ -246,6 +246,20 @@
     <string name="laboratory_ignore_window_secure_title">Ignore window secure flags</string>
     <string name="laboratory_ignore_window_secure_summary">This removes the screenshots and screenrecords limits for all applications. Normally, special applications are replaced with black areas in records. This can be convenient in some cases but may lead to privacy leaks. After changing this toggle, you may need to restart applications for the change to take effect.</string>
     
+    <!-- Miscellaneous/Spoofing -->
+    <string name="spoofing_title">World of Spoofs</string>
+    <string name="spoofing_summary">Bypass app restrictions by spoofing components</string>
+    <string name="spoofing_system_category">System-Wide Spoofs</string>
+    <string name="spoofing_storage_encryption_title">Storage encryption</string>
+    <string name="spoofing_storage_encryption_summary">Spoof the device storage encryption status to \'Encrypted\'</string>
+    <string name="spoofing_apps_category">App-Specific Spoofs<string>
+    <string name="spoofing_photos_title">Google Photos spoof</string>
+    <string name="spoofing_photos_summary">Spoof the Google Photos app as a Pixel XL</string>
+    <string name="spoofing_games_title">Higher FPS in games</string>
+    <string name="spoofing_games_summary">Spoof the device as different models for select games to unlock higher FPS</string>
+    <string name="spoofing_snapchat_title">Snapchat spoof</string>
+    <string name="spoofing_snapchat_summary">Spoof the device as Pixel 2 for Snapchat to allow original quality captures</string>
+
     <!-- Privacy Indicator -->
     <string name="privacy_indicators_category">Privacy Indicators</string>
     <string name="mic_camera_privacy_indicator_title">Mic and camera privacy indicator</string>
@@ -317,14 +331,4 @@
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
-
-    <!-- UDFPS settings -->
-    <string name="udfps_category">UDFPS</string>
-    <string name="enable">Enable</string>
-    <string name="udfps_settings_title">UDFPS customization</string>
-    <string name="udfps_settings_summary">Customize under-display fingerprint scanner</string>
-    <string name="udfps_icon_picker_title">UDFPS icon picker</string>
-    <string name="udfps_icon_picker_summary">Choose your favorite fingerprint icon</string>
-    <string name="udfps_recog_animation_effect_title">UDFPS custom animation</string>
-    <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
 </resources>
