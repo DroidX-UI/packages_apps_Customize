@@ -17,7 +17,7 @@
             android:defaultValue="false" />
 
         <!-- Encryption -->
-        <com.droidx.support.preferences.SystemPropertySwitchPreference
+        <com.droidx.support.preferences.SystemSettingSwitchPreference
             android:key="spoofing_storage_encryption"
             android:title="@string/spoofing_storage_encryption_title"
             android:summary="@string/spoofing_storage_encryption_summary"
