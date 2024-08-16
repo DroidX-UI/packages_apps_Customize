@@ -16,7 +16,7 @@
 
     <!-- DroidX Customizer -->
     <string name="customize_dashboard_title">DXUI LAB</string>
-     <string name="build_tweaks_summary_title">Customize your own version of DroidX-UI!</string>
+    <string name="build_tweaks_summary_title">Customize your own version of DroidX-UI!</string>
       
     <!-- General -->
     <string name="ok">Okay</string>
@@ -259,6 +259,12 @@
     <string name="spoofing_games_summary">Spoof the device as different models for select games to unlock higher FPS</string>
     <string name="spoofing_snapchat_title">Snapchat spoof</string>
     <string name="spoofing_snapchat_summary">Spoof the device as Pixel 2 for Snapchat to allow original quality captures</string>
+    <string name="spoofing_pif_toggle_title">Play Integrity fix</string>
+    <string name="spoofing_pif_toggle_summary">Use the ROM\'s built-in Play Integrity fix values</string>
+    <string name="spoofing_pif_values_title">Play Integrity fix values</string>
+    <string name="spoofing_pif_values_summary">View current values used to spoof GMS for Play Integrity API certification</string>
+    <string name="spoofing_pixelextra_title">Unlock Goodies</string>
+    <string name="spoofing_pixelextra_summary">Spoof the device as Pixel 9 Pro to get Gemini Advanced plus 2TB Free storage in Google One</string> 
 
     <!-- Misc New Strings -->
     <string name="system_category">System-Wide</string>
@@ -315,6 +321,16 @@
     <string name="heads_up_time_out_6sec">6 seconds</string>
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
+
+    <!-- UDFPS settings -->
+    <string name="udfps_category">UDFPS</string>
+    <string name="enable">Enable</string>
+    <string name="udfps_settings_title">UDFPS customization</string>
+    <string name="udfps_settings_summary">Customize under-display fingerprint scanner</string>
+    <string name="udfps_icon_picker_title">UDFPS icon picker</string>
+    <string name="udfps_icon_picker_summary">Choose your favorite fingerprint icon</string>
+    <string name="udfps_recog_animation_effect_title">UDFPS custom animation</string>
+    <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
 
     <!-- Heads up snooze -->
     <string name="heads_up_snooze_title">Snooze timer</string>
