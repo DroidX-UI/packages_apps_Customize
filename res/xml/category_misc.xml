@@ -18,7 +18,7 @@
     android:title="@string/category_misc_title" >
 
     <PreferenceCategory
-        android:key="system_category"
+        android:key="System_category"
         android:title="@string/system_category">
 
         <PreferenceScreen
