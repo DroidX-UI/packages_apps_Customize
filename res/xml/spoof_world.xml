@@ -28,11 +28,36 @@
         android:key="spoofing_apps_category"
         android:title="@string/spoofing_app_specific_category">
 
+        <!-- Play Integrity Fix / PIF -->
+        <com.droidx.support.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.pihooks.enable"
+            android:title="@string/spoofing_pif_toggle_title"
+            android:summary="@string/spoofing_pif_toggle_summary"
+            android:defaultValue="true" />
+
+        <!-- Lets enable it in another time.
+        <Preference
+            android:key="spoofing_pif_values"
+            android:title="@string/spoofing_pif_values_title"
+            android:summary="@string/spoofing_pif_values_summary"
+            android:dependency="persist.sys.pihooks.enable">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.goolag.pif"
+                android:targetClass="com.goolag.pif.PifActivity" />
+        </Preference>
+        -->
+
         <!-- Google Photos -->
         <com.droidx.support.preferences.SystemPropertySwitchPreference
             android:key="persist.sys.gphooks.enable"
             android:title="@string/spoofing_photos_title"
             android:summary="@string/spoofing_photos_summary"
+            android:defaultValue="false" />
+
+        <com.droidx.support.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.pixel.nine"
+            android:title="@string/spoofing_pixelextra_title"
+            android:summary="@string/spoofing_pixelextra_summary"
             android:defaultValue="false" />
 
         <!-- Snapchat -->
