@@ -62,6 +62,6 @@ public class DeviceSpoofSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.CUSTOMIZE;
+        return MetricsProto.MetricsEvent.CUSTOMIZE;
     }
 }
