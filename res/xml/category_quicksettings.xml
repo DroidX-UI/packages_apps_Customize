@@ -16,53 +16,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_quicksettings_title" >
 
-    <PreferenceCategory
-        android:title="@string/category_name_qs_tiles">
-
-        <com.droidx.support.preferences.SecureSettingListPreference
-            android:key="qs_style_round"
-            android:title="@string/qs_style_title"
-            android:entries="@array/qs_style_entries"
-            android:entryValues="@array/qs_style_values"
-            android:defaultValue="1" />
-
-	    <com.droidx.support.preferences.SecureSettingSeekBarPreference
-            android:key="qqs_num_columns"
-            android:title="@string/qqs_columns"
-            android:min="@string/qqs_columns_min"
-            android:max="5"
-            android:defaultValue="5"
-            settings:textStart="@string/qqs_columns_min"
-            settings:textEnd="@string/qqs_columns_max" />
-
-        <com.droidx.support.preferences.SecureSettingSeekBarPreference
-            android:key="qqs_num_columns_landscape"
-            android:title="@string/qqs_columns_landscape"
-            android:min="@string/qqs_columns_landscape_min"
-            android:max="6"
-            android:defaultValue="6"
-            settings:textStart="@string/qqs_columns_landscape_min"
-            settings:textEnd="@string/qqs_columns_landscape_max" />
-
-        <com.droidx.support.preferences.SecureSettingSeekBarPreference
-            android:key="qs_num_columns"
-            android:title="@string/qs_columns"
-            android:min="@string/qs_columns_min"
-            android:max="7"
-            android:defaultValue="4"
-            settings:textStart="@string/qs_columns_min"
-            settings:textEnd="@string/qs_columns_max" />
-
-        <com.droidx.support.preferences.SecureSettingSeekBarPreference
-            android:key="qs_num_columns_landscape"
-            android:title="@string/qs_columns_landscape"
-            android:min="@string/qs_columns_landscape_min"
-            android:max="6"
-            android:defaultValue="6"
-            settings:textStart="@string/qs_columns_landscape_min"
-            settings:textEnd="@string/qs_columns_landscape_max" />
-    </PreferenceCategory>
-
     <com.droidx.support.preferences.SystemSettingSwitchPreference
         android:key="qs_footer_data_usage"
         android:title="@string/qs_footer_datausage_title"
@@ -70,3 +23,4 @@
         android:defaultValue="false" />
 
 </PreferenceScreen>
+

@@ -203,26 +203,6 @@
     <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
     <string name="enable_fingerprint_ripple_effect_summary">Show ripple effect on unlock with fingerprint</string>
 
-    <!-- QS style -->
-    <string name="category_name_qs_tiles">QS Customization</string>
-    <string name="qs_style_title">QS Panel style</string>
-    <string name="qs_style_default">Android 14</string>
-    <string name="qs_style_round">Android 11</string>
-
-    <!-- QS columns customization -->
-    <string name="qs_columns">QS columns in portrait</string>
-    <string name="qs_columns_min">2</string>
-    <string name="qs_columns_max">5</string>
-    <string name="qs_columns_landscape">QS columns in landscape</string>
-    <string name="qs_columns_landscape_min">@string/qs_columns_min</string>
-    <string name="qs_columns_landscape_max">6</string>
-    <string name="qqs_columns">QQS columns in portrait</string>
-    <string name="qqs_columns_min">@string/qs_columns_min</string>
-    <string name="qqs_columns_max">@string/qs_columns_max</string>
-    <string name="qqs_columns_landscape">QQS columns in landscape</string>
-    <string name="qqs_columns_landscape_min">@string/qs_columns_landscape_min</string>
-    <string name="qqs_columns_landscape_max">@string/qs_columns_landscape_max</string>
-
     <!-- Footer -->
     <string name="qs_footer_category">QS Footer</string>
     <string name="qs_footer_datausage_title">Data usage</string>
@@ -328,3 +308,4 @@
     <string name="udfps_recog_animation_effect_title">UDFPS custom animation</string>
     <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
 </resources>
+
