@@ -196,4 +196,19 @@
     <!-- Apply Button --> 
     <string name="apply_change_button_title">Apply</string>
 
+    <!-- Peek Display -->
+    <string name="peek_display_notifications_title">Peek display</string>
+    <string name="peek_display_notifications_summary">Enable minimal lock screen notification style</string>
+    <string name="peek_display_location_title">Peek display location</string>
+    <string name="peek_display_bottom_margin_title">Peek display (bottom) top margin</string>
+
+    <!-- Peek Display Styles -->
+    <string name="peek_display_minimalist">Minimalist</string>
+    <string name="peek_display_style_title">Peek display style</string>
+
+    <string name="quick_settings_header_needs_gallery">You must install a gallery app!</string>
+    <string name="default_value">Default</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+
 </resources> 
