@@ -23,4 +23,10 @@
           android:summary="@string/peek_display_notifications_summary"
           android:fragment="com.droidx.customize.fragments.PeekDisplay" />
 
+     <com.droidx.support.preferences.SystemSettingSwitchPreference
+          android:key="keyguard_now_bar_enabled"
+          android:title="@string/keyguard_now_bar_enabled_title"
+          android:summary="@string/keyguard_now_bar_enabled_summary"
+          android:defaultValue="false" />
+
 </PreferenceScreen>
