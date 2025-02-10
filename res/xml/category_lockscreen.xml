@@ -70,4 +70,21 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="aod_display"
+        android:title="@string/aod_display_category_title">
+
+        <com.droidx.support.preferences.SystemSettingSwitchPreference
+            android:key="custom_aod_image_enabled"
+            android:title="@string/lockscreen_custom_image_enabled_title"
+            android:summary="@string/lockscreen_custom_image_summary"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="lockscreen_custom_image"
+            android:title="@string/lockscreen_custom_image_title"
+            android:summary="@string/lockscreen_custom_image_pick_summary"
+            android:dependency="custom_aod_image_enabled" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
