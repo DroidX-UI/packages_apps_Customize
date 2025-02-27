@@ -69,4 +69,8 @@
     <string name="theme_customization_wifi_icon_title">WiFi icon style</string>
     <string name="theme_customization_wifi_icon_summary">Set custom wifi icon style</string>
 
+    <!-- Google play spoof -->
+    <string name="spoof_settings_title">Play Integrity</string>
+    <string name="spoof_settings_summary">Spoof various aspect of device</string>
+
 </resources> 
