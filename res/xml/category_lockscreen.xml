@@ -16,4 +16,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_lockscreen_title" >
 
+     <com.droidx.support.preferences.SystemSettingSwitchPreference
+            android:key="auth_ripple_enabled"
+            android:title="@string/enable_fingerprint_ripple_effect_title"
+            android:summary="@string/enable_fingerprint_ripple_effect_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
