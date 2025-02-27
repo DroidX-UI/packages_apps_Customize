@@ -73,4 +73,7 @@
     <string name="spoof_settings_title">Play Integrity</string>
     <string name="spoof_settings_summary">Spoof various aspect of device</string>
 
+    <!-- Network traffic -->
+    <string name="network_traffic_state_title">Network traffic indicator</string>
+
 </resources> 
