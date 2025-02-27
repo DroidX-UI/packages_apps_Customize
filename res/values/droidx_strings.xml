@@ -69,4 +69,7 @@
     <string name="theme_customization_wifi_icon_title">WiFi icon style</string>
     <string name="theme_customization_wifi_icon_summary">Set custom wifi icon style</string>
 
+    <!-- Network traffic -->
+    <string name="network_traffic_state_title">Network traffic indicator</string>
+
 </resources> 
