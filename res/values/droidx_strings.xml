@@ -72,4 +72,8 @@
     <!-- Network traffic -->
     <string name="network_traffic_state_title">Network traffic indicator</string>
 
+    <!-- Gestures -->
+    <string name="gesture_title">Gestures Settings</string>
+    <string name="three_finger_summary">Swipe 3 fingers to take Screenshot</string>
+
 </resources> 

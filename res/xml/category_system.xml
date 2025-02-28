@@ -47,4 +47,16 @@
         android:summary="@string/theme_customization_icon_shape_summary"
         android:fragment="com.droidx.customize.fragments.IconShapes"/>
 
+    <PreferenceCategory
+      android:title="@string/gesture_title">
+    
+        <Preference
+            android:key="swipe_to_screenshot_summary"
+            android:title="@string/swipe_to_screenshot_title"
+            android:summary="@string/three_finger_summary"
+            android:fragment="com.android.settings.gestures.SwipeToScreenshotGestureSettings"
+            settings:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
