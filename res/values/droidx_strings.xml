@@ -76,4 +76,9 @@
     <string name="gesture_title">Gestures Settings</string>
     <string name="three_finger_summary">Swipe 3 fingers to take Screenshot</string>
 
+    <!-- Custom settings dashboard style -->
+     <string name="settings_dashboard_style_title">Settings Styles</string>
+     <string name="settings_dashboard_style_1">DXUI Style</string>
+     <string name="settings_dashboard_style_2">Simple Style</string>
+
 </resources> 

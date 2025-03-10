@@ -33,6 +33,8 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.android.SystemRestartUtils;
+import com.droidx.support.preferences.SystemSettingListPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -48,6 +50,10 @@ import java.util.List;
 public class System extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
 
+    public static final String SETTINGS_DASHBOARD_STYLE = "settings_dashboard_style";
+ 
+    private SystemSettingListPreference mSettingsDashBoardStyle;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -55,10 +61,18 @@ public class System extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        mSettingsDashBoardStyle = (SystemSettingListPreference) findPreference(SETTINGS_DASHBOARD_STYLE);
+        mSettingsDashBoardStyle.setOnPreferenceChangeListener(this);
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        final String key = preference.getKey();
+        ContentResolver resolver = getActivity().getContentResolver();
+ 	    if (preference == mSettingsDashBoardStyle){
+            SystemRestartUtils.showSettingsRestartDialog(getContext());
+            return true;
+            }
         return false;
     }  
 
