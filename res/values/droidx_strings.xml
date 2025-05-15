@@ -217,6 +217,11 @@
     <string name="keyguard_now_bar_height_title">Now bar height</string>
     <string name="keyguard_now_bar_height_summary">Adjust the height of the Now bar</string>
 
+    <!-- Units -->
+    <string name="unit_milliseconds">milliseconds</string>
+    <string name="unit_pixels" translatable="false">dp</string>
+    <string name="unit_seconds">seconds</string>
+
     <!-- Lock screen/Pulse music visualizer -->
     <string name="pulse_help_policy_notice_title">About Pulse</string>
     <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic equalizer when music plays on the device</string>
