@@ -19,13 +19,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/lockscreen_widgets_title">
 
-    <com.droidx.support.preferences.SystemSettingSwitchPreference
+    <com.droidx.customize.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_widgets_enabled"
         android:title="@string/lockscreen_widgets_enabled_title"
         android:summary="@string/lockscreen_widgets_enabled_summary"
         android:defaultValue="false" />
 
-    <com.droidx.support.preferences.SystemSettingSwitchPreference
+    <com.droidx.customize.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_info_widgets_enabled"
         android:dependency="lockscreen_widgets_enabled"
         android:title="@string/lockscreen_display_widgets_title"

@@ -9,6 +9,8 @@
         </shape>
     </item>
     <item android:gravity="fill_horizontal|center" android:id="@android:id/progress">
-        <com.android.systemui.util.RoundedCornerProgressDrawable android:drawable="@drawable/widget_progress_full" />
+        <clip android:drawable="@drawable/widget_progress_full" 
+              android:clipOrientation="horizontal"
+              android:gravity="left" />
     </item>
 </layer-list>

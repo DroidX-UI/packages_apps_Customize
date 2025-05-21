@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025 DroidX-UI Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <declare-styleable name="WallpaperView">
+        <attr name="blurred" format="boolean" />
+    </declare-styleable>
+</resources>
