@@ -17,6 +17,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_misc_title" >
 
+    <com.droidx.support.preferences.GlobalSettingSwitchPreference
+        android:key="window_ignore_secure"
+        android:title="@string/ignore_window_secure_title"
+        android:summary="@string/ignore_window_secure_summary"
+        android:defaultValue="false"/>
+
     <PreferenceCategory
         android:key="themes_animations_category"
         android:title="@string/themes_animations_category">
@@ -55,9 +61,9 @@
     </PreferenceCategory>
 
     <Preference
-            android:key="pulse_settings"
-            android:title="@string/lock_screen_pulse_settings_title"
-            android:summary="@string/lock_screen_pulse_settings_summary"
-            android:fragment="com.droidx.customize.fragments.PulseSettings" />
+        android:key="pulse_settings"
+        android:title="@string/lock_screen_pulse_settings_title"
+        android:summary="@string/lock_screen_pulse_settings_summary"
+        android:fragment="com.droidx.customize.fragments.PulseSettings" />
 
 </PreferenceScreen>

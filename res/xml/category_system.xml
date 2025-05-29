@@ -47,15 +47,25 @@
         android:summary="@string/theme_customization_icon_shape_summary"
         android:fragment="com.droidx.customize.fragments.IconShapes"/>
 
+    <!-- Incall vibration options -->
     <PreferenceCategory
-      android:title="@string/gesture_title">
-    
-        <Preference
-            android:key="swipe_to_screenshot_summary"
-            android:title="@string/swipe_to_screenshot_title"
-            android:summary="@string/three_finger_summary"
-            android:fragment="com.android.settings.gestures.SwipeToScreenshotGestureSettings"
-            settings:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" />
+        android:key="accessibility_incall_vibration_category"
+        android:title="@string/incall_vibration_category" >
+
+        <com.droidx.support.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_connect"
+            android:title="@string/incall_vibrate_connect_title"
+            android:defaultValue="true" />
+
+        <com.droidx.support.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_callwaiting"
+            android:title="@string/incall_vibrate_call_wait_title"
+            android:defaultValue="true" />
+
+        <com.droidx.support.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_disconnect"
+            android:title="@string/incall_vibrate_disconnect_title"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 

@@ -30,7 +30,7 @@
     <string name="reset">Reset</string>
     
     <string name="category_system_title">System</string>
-    <string name="category_buttons_title">Buttons</string>
+    <string name="category_buttons_title">Buttons &amp; Gestures</string>
     <string name="category_lockscreen_title">Lockscreen</string>
     <string name="category_gestures_title">Gestures</string>
     <string name="category_battery_title">Battery</string>

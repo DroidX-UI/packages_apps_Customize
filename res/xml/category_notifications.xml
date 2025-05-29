@@ -38,4 +38,17 @@
     	     android:max="210"
           android:dependency="keyguard_now_bar_enabled" />
 
+     <com.droidx.support.preferences.SystemSettingSwitchPreference
+          android:key="notification_sound_vib_screen_on"
+          android:title="@string/notification_sound_vib_screen_on_title"
+          android:summary="@string/notification_sound_vib_screen_on_summary"
+          android:defaultValue="true" />
+
+     <!-- Compact heads up -->
+     <com.droidx.support.preferences.SystemPropertySwitchPreference
+          android:key="persist.sys.compact_heads_up_notification.always_show"
+          android:defaultValue="false"
+          android:title="@string/compact_heads_up_notifications_enabled_title"
+          android:summary="@string/compact_heads_up_notifications_enabled_summary" />
+
 </PreferenceScreen>

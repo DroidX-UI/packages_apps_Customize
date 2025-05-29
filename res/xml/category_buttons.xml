@@ -16,4 +16,35 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_buttons_title" >
 
+    <com.droidx.support.preferences.SystemSettingSwitchPreference
+        android:key="show_app_volume"
+        android:title="@string/app_volume_title"
+        android:summary="@string/app_volume_summary"
+        android:defaultValue="false"/>
+
+    <Preference
+        android:key="volume_button_music_control_sumary"
+        android:title="@string/volume_button_music_control_title"
+        android:fragment="com.android.settings.gestures.VolumeButtonMusicControlGestureSettings"
+        settings:controller="com.android.settings.gestures.VolumeButtonMusicControlPreferenceController" />
+
+    <!-- Double tap to sleep -->
+    <com.droidx.support.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/status_bar_double_tap_to_sleep_title"
+        android:summary="@string/status_bar_double_tap_to_sleep_summary"
+        android:defaultValue="false" />
+
+     <PreferenceCategory
+      android:title="@string/gesture_title">
+    
+        <Preference
+            android:key="swipe_to_screenshot_summary"
+            android:title="@string/swipe_to_screenshot_title"
+            android:summary="@string/three_finger_summary"
+            android:fragment="com.android.settings.gestures.SwipeToScreenshotGestureSettings"
+            settings:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
